@@ -1,0 +1,44 @@
+
+.exercise-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .exercise-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .exercise-item {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .exercise-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .exercise-image:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  .exercise-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  
+  .exercise-container h3 {
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px;
+    color: #333; 
+    margin-bottom: 20px; 
+  }
+  

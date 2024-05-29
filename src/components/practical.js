@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../style/Practical.css'; 
 
@@ -50,14 +51,16 @@ const Practical = () => {
       <h3>Practical Exercises</h3>
       <div className="practical-list">
         {currentItems.map((practical) => (
-          <div key={practical.id} className="practical-card">
-            <img src={practical.gifUrl} alt={practical.name} className="practical-image" />
-            <div className="practical-details">
-              <p className="practical-bodypart"> {practical.bodyPart}</p>
-              <p className="practical-target">{practical.target}</p>
+          <Link to={`/exercise/${practical.id}`} key={practical.id} className="practical-card-link">
+            <div className="practical-card">
+              <img src={practical.gifUrl} alt={practical.name} className="practical-image" />
+              <div className="practical-details">
+                <p className="practical-bodypart"> {practical.bodyPart}</p>
+                <p className="practical-target">{practical.target}</p>
+              </div>
+              <p className="practical-name">{practical.name}</p>
             </div>
-            <p className="practical-name">{practical.name}</p>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="pagination">
@@ -76,3 +79,6 @@ const Practical = () => {
 };
 
 export default Practical;
+
+
+

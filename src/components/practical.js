@@ -5,10 +5,12 @@ import '../style/Practical.css';
 
 const Practical = () => {
   const [practicalData, setPracticalData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9; 
+  const [searchTerm, setSearchTerm] = useState('');
+  const itemsPerPage = 9;
 
   useEffect(() => {
     const fetchPracticalData = async () => {
@@ -22,6 +24,7 @@ const Practical = () => {
           }
         });
         setPracticalData(response.data);
+        setFilteredData(response.data);
       } catch (error) {
         console.error('Error fetching practical exercises:', error);
         setError('Error fetching practical exercises. Please try again later.');
@@ -33,11 +36,21 @@ const Practical = () => {
     fetchPracticalData();
   }, []);
 
+  useEffect(() => {
+    const filtered = practicalData.filter((exercise) =>
+      exercise.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      exercise.bodyPart.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      exercise.target.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredData(filtered);
+    setCurrentPage(1);
+  }, [searchTerm, practicalData]);
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = practicalData.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
 
-  const totalPages = Math.ceil(practicalData.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
   const handleClick = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -49,6 +62,13 @@ const Practical = () => {
   return (
     <div className="practical-container">
       <h3>Practical Exercises</h3>
+      <input
+        type="text"
+        placeholder="Search exercise..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="search-input"
+      />
       <div className="practical-list">
         {currentItems.map((practical) => (
           <Link to={`/exercise/${practical.id}`} key={practical.id} className="practical-card-link">
@@ -79,6 +99,7 @@ const Practical = () => {
 };
 
 export default Practical;
+
 
 
 

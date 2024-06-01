@@ -1,73 +1,89 @@
-/* ExerciseDetails.css */
-
 .details-container {
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .details-container h3 {
-    font-size: 2rem;
-    color: #343a40;
-    margin-bottom: 20px;
-  }
-  
-  .details-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .details-container p {
-    font-size: 1.2rem;
-    color: #6c757d;
-    margin: 10px 0;
-  }
-  
-  /*.videos-container {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .videos-container h3 {
-    font-size: 2rem;
-    color: #343a40;
-    margin-bottom: 20px;
-  }
-  
-  .video-card {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    background-color: #ffffff;
-    padding: 10px;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f8f9fa;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; 
   }
   
-  .video-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .video-card img {
-    width: 120px;
-    height: 90px;
+  .details-image {
+    width: 45%;
+    height: 500px;
     border-radius: 10px;
-    margin-right: 10px;
   }
   
-  .video-card p {
-    font-size: 1rem;
-    color: #495057;
-  }*/
+  .details-content {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .details-title {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .details-description {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 40px;
+  }
+  
+  .details-target {
+    color: #ff6600;
+    font-weight: bold;
+  }
+  
+  .details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .details-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .details-icon {
+    font-size: 2rem;
+    color: #ff6600;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .details-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .details-image {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .details-content {
+      width: 100%;
+    }
+  
+    .details-title {
+      font-size: 1.5rem;
+    }
+  
+    .details-description {
+      font-size: 1rem;
+    }
+  
+    .details-icon {
+      font-size: 1.5rem;
+    }
+  }
   

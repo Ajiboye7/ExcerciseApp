@@ -14,7 +14,7 @@ function Hero() {
         <button>Explore Excercise</button>
       </div>
       <div className="hero-image">
-        <img src={logo} alt="Exercise" />
+        <img src={logo} alt="Exercise"/>
       </div>
     </div>
   );

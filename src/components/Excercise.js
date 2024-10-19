@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../style/Excercise.css'
 import back from '../Images/back.jpg';
@@ -61,6 +61,61 @@ const Exercise = () => {
   );
 };
 
-export default Exercise;
+export default Exercise;*/
+
+import { useEffect } from 'react';
+
+const loadFacebookSDK = () => {
+  if (!window.FB) {
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  }
+};
+
+const FacebookLogin = () => {
+  useEffect(() => {
+    loadFacebookSDK();
+
+    window.fbAsyncInit = function() {
+      window.FB.init({
+        appId      : '1498943767275613',  // Your App ID
+        cookie     : true,                // Enable cookies to allow the server to access the session
+        xfbml      : true,                // Parse social plugins on this page
+        version    : 'v17.0'              // Use the latest version of the Graph API
+      });
+    };
+  }, []);
+
+
+  const loginWithFacebook = () => {
+    window.FB.login((response) => {
+      if (response.authResponse) {
+        const accessToken = response.authResponse.accessToken;
+        console.log('Access Token:', accessToken);
+        // You now have the access token
+      } else {
+        console.log('User cancelled login or did not fully authorize.');
+      }
+    }, { scope: 'public_profile,email,instagram_basic,instagram_manage_insights' });
+  };
+
+
+  
+
+
+  return (
+    <div>
+      <h1>Login with Facebook</h1>
+      <button onClick={loginWithFacebook}>Login with Facebook</button>
+    </div>
+  );
+};
+
+export default FacebookLogin;
 
 

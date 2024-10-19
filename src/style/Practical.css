@@ -10,7 +10,56 @@
 
 .practical-list {
   display: grid;
-  grid
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.practical-card-link {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.practical-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.practical-card:hover {
+  transform: translateY(-10px);
+  background-color: #f8f8f8;
+}
+
+.practical-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.practical-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.practical-bodypart, .practical-target {
+  font-size: 20px;
+  color: #555;
+  flex: 1;
+  padding: 5px 10px;
+  background-color: #e07c38;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
 
 .practical-bodypart:hover, .practical-target:hover {
   background-color: #e0e0e0;

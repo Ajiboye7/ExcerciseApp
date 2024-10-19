@@ -1,4 +1,4 @@
-/*import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../style/Excercise.css'
 import back from '../Images/back.jpg';
@@ -61,9 +61,9 @@ const Exercise = () => {
   );
 };
 
-export default Exercise;*/
+export default Exercise;
 
-import { useEffect } from 'react';
+/*import { useEffect } from 'react';
 
 const loadFacebookSDK = () => {
   if (!window.FB) {
@@ -117,5 +117,5 @@ const FacebookLogin = () => {
 };
 
 export default FacebookLogin;
-
+*/
 

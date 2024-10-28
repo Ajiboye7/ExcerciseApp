@@ -29,6 +29,25 @@
   padding: 15px;
   text-align: center;
   width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.practical-card:hover {
+  transform: translateY(-10px);
+  background-color: #f8f8f8;
+}
+
+.practical-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.practical-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
 .practical-bodypart, .practical-target {

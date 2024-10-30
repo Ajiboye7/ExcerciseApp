@@ -18,7 +18,30 @@ const ExerciseDetails = () => {
       try {
         // Fetch exercise details
         const response = await axios.get(`https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`, {
-          headers
+          headers: {
+            'X-RapidAPI-Key': 'cdd55f2df6msh1337361e79a64f1p1b12c6jsn48d27f4e316a',
+            'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+          }
+        });
+        setExercise(response.data);
+
+        // Fetch related exercise videos
+        const videoResponse = await axios.get('https://youtube-search-and-download.p.rapidapi.com/search', {
+          params: { query: response.data.name, type: 'video' },
+          headers: {
+            'X-RapidAPI-Key': 'cdd55f2df6msh1337361e79a64f1p1b12c6jsn48d27f4e316a',
+            'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
+          }
+        });
+        setVideos(videoResponse.data.contents);
+
+        // Fetch similar exercises based on the target muscle group
+        const similarResponse = await axios.get(`https://exercisedb.p.rapidapi.com/exercises/target/${response.data.target}`, {
+          headers: {
+            'X-RapidAPI-Key': 'cdd55f2df6msh1337361e79a64f1p1b12c6jsn48d27f4e316a',
+            'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+          }
+        });
         setSimilarExercises(similarResponse.data);
 
       } catch (error) {

@@ -6,7 +6,7 @@ const SimilarExercise = ({ exercises }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 6;
 
-  const indexO\
+  const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
 
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);

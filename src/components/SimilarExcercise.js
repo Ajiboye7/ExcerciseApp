@@ -24,12 +24,7 @@ const SimilarExercise = ({ exercises }) => {
         {currentExercises.map((exercise) => (
           <Link to={`/exercise/${exercise.id}`} key={exercise.id} className="practical-card-link">
             <div className="practical-card">
-              <img src={exercise.gifUrl} alt={exercise.name} className="practical-image" />
-              <div className="practical-details">
-                <p className="practical-bodypart">{exercise.bodyPart}</p>
-                <p className="practical-target">{exercise.target}</p>
-              </div>
-              <p className="practical-name">{exercise.name}</p>
+              \cal-name">{exercise.name}</p>
             </div>
           </Link>
         ))}

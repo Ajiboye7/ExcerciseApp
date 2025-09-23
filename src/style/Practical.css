@@ -89,22 +89,7 @@
   border-radius: 20px;
   font-size: 16px;
   display: block;
-}
-
-
-.pagination {
-  margin-top: 20px;
-}
-
-.pagination button {
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  margin: 0 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+}s
 
 .pagination button:hover {
   background-color: #ddd;

@@ -113,7 +113,12 @@
     grid-template-columns: 1fr;
   }
 
-   
+  .practical-card {
+    margin-bottom: 10px;
+  }
+  .practical-container h3{
+    font-size: 2rem; 
+  }
 }
 @media screen and (max-width: 600px) {
   .search-input {

@@ -102,7 +102,16 @@
 
 /* Media Queries */
 
-@me 
+@media (max-width: 1024px) {
+  .practical-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .practical-list {
+    grid-template-columns: 1fr;
+  }
 
   .practical-card {
     margin-bottom: 10px;

@@ -19,7 +19,7 @@ const SimilarExercise = ({ exercises }) => {
 
   return (
     <div className="practical-container">
-      <h3>Similar Exercises</h3>
+      <h3>Similar E</h3>
       <div className="practical-list">
         {currentExercises.map((exercise) => (
           <Link to={`/exercise/${exercise.id}`} key={exercise.id} className="practical-card-link">

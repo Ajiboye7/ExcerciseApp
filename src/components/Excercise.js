@@ -33,7 +33,7 @@ const Exercise = () => {
         const filteredData = response.data.filter((_, index) => ![3, 4, 6, 7, 8].includes(index));
         setExerciseData(filteredData);
       } catch (error) {
-        console.error('Error fetching exercises:', error);
+        console.error('Error fetching exercises!:', error);
         setError('Error fetching exercises. Please try again later.');
       } finally {
         setLoading(false);

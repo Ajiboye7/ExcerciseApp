@@ -48,7 +48,7 @@ const Exercise = () => {
 
   return (
     <div className="exercise-container">
-      <h3>Exercises keep you healthy</h3>
+      <h3>Exercise keep you healthy</h3>
       <div className="exercise-list">
         {exerciseData.map((exercise, index) => (
           <div className="exercise-item" key={index}>

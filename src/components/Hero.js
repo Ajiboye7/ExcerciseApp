@@ -11,7 +11,7 @@ function Hero() {
         <br/>Whether it's a daily jog, a gym workout, or a yoga session, staying active can improve your mood,boost your energy levels, and reduce the risk of chronic diseases.
         <br/>Start your fitness journey today and experience the benefits of a healthy lifestyle!</p>
         <p>Check out for the most effective exercise for you</p>
-        <button>Explore Exercisefrtdiuy</button>
+        <button>Explore Exercise</button>
       </div>
       <div className="hero-image">
         <img src={logo} alt="Exercise"/>

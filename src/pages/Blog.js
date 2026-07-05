@@ -30,7 +30,7 @@ function WorkoutGallery() {
   }, []);
   return (
         <div className="photos-section">
-      <h1 className="section-title">Posts</h1>
+      <h1 className="section-title">Your Posts</h1>
       <div className="photos-container">
         {photos.map((photo) => (
           <div key={photo.id} className="photo-card">

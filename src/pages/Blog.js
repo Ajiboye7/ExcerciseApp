@@ -22,7 +22,7 @@ function WorkoutGallery() {
     .then(response => {
       const photos = response.data.results;
       setPhotos(photos);
-     /* console.log(photos)*/
+     
     })
     .catch(error => {
       console.error('Error fetching photos:', error);
@@ -40,7 +40,7 @@ function WorkoutGallery() {
               <p className="photo-description">{photo.description}</p>
               <div className="photo-user-info">
                 <p className="photo-likes"> <i class="fas fa-heart"></i>{photo.likes}</p>
-                <p className="photo-username">Uploaded by: {photo.user.name}</p>
+                <p className="photo-username">Name: {photo.user.name}</p>
                 <p className="photo-location">Location: {photo.user.location}</p>
               </div>
             </div>

@@ -24,7 +24,7 @@ const Footer = () => {
 
         <div className="footer-section contact">
           <h2>Contact</h2>
-          <p><i className="fas fa-phone-alt"></i> +234 8172710973</p>
+          <p><i className="fas fa-phone-alt"></i> +2348172710973</p>
           <p><i className="fas fa-envelope"></i> ajiboyemuyideen@gmail.com</p>
         </div>
       </div>

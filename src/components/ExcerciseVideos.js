@@ -7,7 +7,7 @@ const ExerciseVideos = ({ name, videos }) => {
       <h3>Related Videos</h3>
       {videos.length ? (
         <div className='video-header'>
-          <h4>Watch <span>{name}</span> Exercise Videos </h4>
+          <h4>Watch <span>{name}</span> Exercise Videos here </h4>
           <div className="videos-grid">
             {videos.slice(0, 6).map((video, index) => (
               <div key={index} className="video-card">

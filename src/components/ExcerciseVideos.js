@@ -21,7 +21,7 @@ const ExerciseVideos = ({ name, videos }) => {
           </div>
         </div>
       ) : (
-        <p>No videos found here. Try reloading the page.</p>
+        <p>No videos found here. Try reloading the page now</p>
       )}
     </div>
   );
